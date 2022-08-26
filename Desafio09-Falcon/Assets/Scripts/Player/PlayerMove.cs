@@ -105,7 +105,7 @@ public class PlayerMove : MonoBehaviour
     {
         cameraAxisX += Input.GetAxis("Mouse X");
         cameraAxisY += Input.GetAxis("Mouse Y");
-        Quaternion newRotation = Quaternion.Euler(0, cameraAxisX, 0);
+        Quaternion newRotation = Quaternion.Euler(-cameraAxisY, cameraAxisX, 0);
         transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, 2f * Time.deltaTime);
 
     }
